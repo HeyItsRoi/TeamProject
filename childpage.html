@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Your child</title>
+	<!-- First page of our website, it'll have a picture of the kids and a descripton. All this according to Enzo and Roi's sketches.
+		 Also add radiobuttons at the bottom? Info will be retrieved from the database when we make it.-->
+
+	<link rel="stylesheet" type="text/css" href="startbootstrap-small-business-gh-pages\css\bootstrap.min.css">	 
+	<link rel="stylesheet" type="text/css" href="startbootstrap-small-business-gh-pages\css\small-business.css"> 
+	<link rel="stylesheet" type="text/css" href="childpage.css">
+</head>
+<body>
+	<header>
+		<nav class="navbar-fixed-top">
+			<a href="" id="one">Home</a>
+			<a href="">Page 1</a>
+			<a href="">Page 2</a>
+		</nav>
+	</header>
+	
+	<div class="container">
+		<img src="blank.png" id="childPic">
+	</div>
+
+	<a href="editpage.html" id="editLink">Edit info</a>
+
+	<h2> KID'S NAME</h2>
+
+	<p id="otherInfo">
+		<br>
+		OTHER INFO ON THE KID(S)<br>
+		OTHER INFO ON THE KID(S)<br>
+		OTHER INFO ON THE KID(S)<br>
+		OTHER INFO ON THE KID(S)<br>
+		OTHER INFO ON THE KID(S)<br>
+		OTHER INFO ON THE KID(S)<br>
+		OTHER INFO ON THE KID(S)<br>
+	</p>
+
+	<a href="parentspage.html" id="parentsLink">Contact parents</a>
+
+	<p id="specificInfo">
+		<br>
+		SPECIFIC INFO ON THE KID(S)<br>
+		SPECIFIC INFO ON THE KID(S)<br>
+		SPECIFIC INFO ON THE KID(S)<br>
+		SPECIFIC INFO ON THE KID(S)<br>
+		SPECIFIC INFO ON THE KID(S)<br>
+		SPECIFIC INFO ON THE KID(S)<br>
+		SPECIFIC INFO ON THE KID(S)<br>
+	</p>
+
+	<div class="gallery">
+		<img src="blank.png">
+		<img src="blank.png"> 
+		<img src="blank.png">
+		<img src="blank.png">
+		<img src="blank.png"> 
+		<img src="blank.png">
+		<img src="blank.png">
+		<img src="blank.png"> 
+		<img src="blank.png">
+	</div> 
+
+	<p id="availabilityRequest">Please indicate the days the child is available to go to the daycare</p>
+
+	<div id="radiogroup">
+		<div class="wrap">
+			<label for="monday">Monday</label>
+			<input type="radio" name="daysAvailability" id="monday" value="Monday">
+		</div>
+		<div class="wrap">
+			<label for="tuesday">Tuesday</label>
+			<input type="radio" name="daysAvailability" id="tuesday" value="Tuesday">
+		</div>
+		<div class="wrap">
+			<label for="wednesday">Wednesday</label>
+			<input type="radio" name="daysAvailability" id="wednesday" value="Wednesday">
+		</div>
+		<div class="wrap">
+			<label for="thursday">Thursday</label>
+			<input type="radio" name="daysAvailability" id="thursday" value="Thursday">
+		</div>
+		<div class="wrap">
+			<label for="friday">Friday</label>
+			<input type="radio" name="daysAvailability" id="friday" value="Friday">
+		</div>
+	</div> 
+
+	<button type="button" id="submit">SUBMIT</button>
+</body>
+</html>
