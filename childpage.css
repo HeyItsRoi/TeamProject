@@ -1,0 +1,95 @@
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0%;
+}
+
+.navbar-fixed-top {
+	background-color: black;
+	padding: 15px;
+}
+
+.navbar-fixed-top * {
+	margin-right: 20%; 
+	padding: 1%;
+	color: grey;
+}
+
+.navbar-fixed-top *:hover {
+	background-color: grey;
+	color: black;
+}
+
+#one {
+	margin-left: 10%;
+}
+
+.container {
+	margin-top: -1%;
+	margin-left: 10%;
+	display: block;
+}
+
+#childPic {
+	width: 20%;
+	height: auto;
+}
+
+h2 {
+	margin-left: 30%;
+	margin-top: -18%;
+	margin-bottom: 0%;
+}
+
+#otherInfo {
+	margin-left: 30%;
+}
+
+#specificInfo {
+	margin-top: 1%;
+	margin-left: 12%;
+}
+
+#parentsLink {
+	margin-left: 30%;
+}
+
+#editLink {
+	margin-left: 17%;
+}
+
+.gallery {
+	width: auto;
+	height: auto;		
+	margin-left: 50%;
+	display: block;
+	margin-top: -36%;
+	padding: 5%;
+}
+
+.gallery img {
+	margin: 2%;
+	width: 25%;
+	height: auto;	
+	float: left;
+	display: block;
+}
+
+#availabilityRequest {
+	margin-top: 30%;
+	margin-left: 32%;
+}
+
+#radiogroup {
+	margin-left: 30%;
+}
+
+#radiogroup .wrap {
+	display: inline-block;
+	margin-right: 2%;
+}
+
+#submit {
+	float: right;
+	margin-right: 11%;
+}
