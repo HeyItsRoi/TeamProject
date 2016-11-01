@@ -1,0 +1,101 @@
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0%;
+	background-image: url("background.jpg");
+	background-size: 1800px 1024px;
+    background-repeat: no-repeat;
+}
+
+.navbar-fixed-top {
+	background-color: #4682B4;
+	padding: 15px;
+}
+
+.navbar-fixed-top a {
+	margin-right: 20%; 
+	padding: 1%;
+	color: white;
+}
+
+.navbar-fixed-top a:hover {
+	background-color: yellow;
+	color: black;
+	text-decoration: none;
+}
+
+#one {
+	margin-left: 10%;
+}
+
+.container {
+	margin-top: -1%;
+	margin-left: 10%;
+	display: block;
+	background-color: white;
+}
+
+#childPic {
+	width: 20%;
+	float: left;
+	margin-right: 5%; 
+
+}
+
+
+#otherInfo {
+	
+	margin-left: 30%;
+	float: right;
+}
+
+#specificInfo {
+	margin-top: 1%;
+	margin-left: 12%;
+	background-color: white;
+}
+
+#editPicture {
+	margin-left: 15%;
+}
+
+#edit{
+	margin-left: 200px;
+}
+.gallery {
+	width: 45%;	
+	margin-left: 50%;
+	display: block;
+	margin-top: -31.5%;
+	padding: 5%;
+}
+
+.gallery img {
+	margin: 1%;
+	width: 25%;
+	height: auto;	
+	float: left;
+	display: block;
+}
+
+#availabilityRequest {
+	margin-top: 30%;
+	margin-left: 32%;
+	font-weight: bold;
+}
+
+#radiogroup {
+	margin-left: 30%;
+}
+
+#radiogroup .wrap {
+	display: inline-block;
+	margin-right: 2%;
+}
+
+#commentSection{
+	padding-left: 30%;
+}
+#submit{
+	margin-left: 950px;
+}
