@@ -1,0 +1,59 @@
+<?php
+$servername = "localhost";
+$username = "username";
+$password = "password";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+
+// Create database
+$sql = "CREATE DATABASE myDaycare";
+if ($conn->query($sql) === TRUE) {
+    echo "Database created successfully";
+} else {
+    echo "Error creating database: " . $conn->error;
+}
+
+$sql = "CREATE TABLE MyParents (
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+firstname VARCHAR2(30) NOT NULL,
+lastname VARCHAR2(30) NOT NULL,
+email VARCHAR2(50) NOT NULL,
+phone_number NUMBER NOT NULL,
+address VARCHAR2(50) NOT NULL,
+child_Fname VARCHAR2(50) NOT NULL,
+child_Lname VARCHAR2(50) NOT NULL,
+)";
+
+$sql = "CREATE TABLE MyChild (
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+cfirstname VARCHAR2(30) NOT NULL,
+clastname VARCHAR2(30) NOT NULL,
+allergies VARCHAR2(50),
+phone_number NUMBER NOT NULL,
+address VARCHAR2(50) NOT NULL,
+parent_Fname VARCHAR2(50) NOT NULL,
+parent_Lname VARCHAR2(50) NOT NULL,
+child_dob DATE NOT NULL
+)";
+
+if ($conn->query($sql) === TRUE) {
+    echo "Table MyParents created successfully";
+} else {
+    echo "Error creating table: " . $conn->error;
+}
+if ($conn->query($sql) === TRUE) {
+    echo "Table MyMyChild created successfully";
+} else {
+    echo "Error creating table: " . $conn->error;
+}
+
+$sql = "INSERT INTO MyParents (firstname, lastname, email, phone_number, address, child_Fname, child_Lname)
+ADD A METHOD!!!
+
+$conn->close();
+?>
