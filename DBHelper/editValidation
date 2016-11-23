@@ -1,0 +1,88 @@
+<?php>
+// $cFNameErr = "";
+// $cLNameErr = "";
+// $pFNameErr = "";
+// $pLNameErr = "";
+// $phoneErr = "";
+// $addErr = "";
+// $cityError = "";
+// $zipError = "";
+
+if (isset($_POST['submit'])){
+	//CHILD FIRST NAME VALIDATION
+	if(empty($_POST["cfirstname"])){
+		//do something like highlight the textbox
+	}else{
+		$cfname = test_input($_POST["cfirstname"]);
+		if (!preg_match("/^[a-zA-Z]*$/",$cfname)) {
+			//Cheking if theres no number
+		}
+	}
+
+	//CHILD LAST NAME VALIDATION
+	if(empty($_POST["clastname"])){
+		//do something like highlight the textbox
+	}else{
+		$clname = test_input($_POST["clastname"]);
+		if (!preg_match("/^[a-zA-Z]*$/",$clname)) {
+			//Cheking if theres no number
+		}
+	}
+
+	//PARENT FIRSTNAME VALIDATION
+	if(empty($_POST["parent_Fname"])){
+		//do something like highlight the textbox
+	}else{
+		$plname = test_input($_POST["parent_Fname"]);
+		if (!preg_match("/^[a-zA-Z]*$/",$pfname)) {
+			//Cheking if theres no number
+		}
+	}
+
+	//PARENT LASTNAME VALIDATION
+	if(empty($_POST["parent_Lname"])){
+		//do something like highlight the textbox
+	}else{
+		$plname = test_input($_POST["parent_Lname"]);
+		if (!preg_match("/^[a-zA-Z]*$/",$plname)) {
+			//Cheking if theres no number
+		}
+	}
+
+	//PHONE NUMBER VALIDATION
+	if(empty($_POST["phone_number"])){
+		//do something like highlight the textbox
+	}else{
+		$phone = test_input($_POST["phone_number"]);
+		if (preg_match("/^[0-9]{3}-[0-9]{4}-[0-9]{4}$/", $phone)) {
+			//valid phone number
+		}
+	}
+
+	//ADDRESS VALIDATION
+	if(empty($_POST["address"])){
+		//do something like highlight the textbox
+	}else{
+		$address = test_input($_POST["address"]);
+	}
+
+	//CITY VALIDATION
+	if(empty($_POST["city"])){
+		//do something like highlight the textbox
+	}else{
+		$city = test_input($_POST["city"]);
+	}
+
+	//POSTAL CODE VALIDATION
+	if(empty($_POST["zip"])){
+		//do something like highlight the textbox
+	}else{
+		$zip = test_input($_POST["zip"]);
+		if (preg_match("/^([a-ceghj-npr-tv-z]){1}[0-9]{1}[a-ceghj-npr-tv-z]{1}[0-9]{1}[a-ceghj-npr-tv-z]{1}[0-9]{1}$/i", $zip)) {
+			//valid postal code
+		}
+	}	
+
+
+}
+?>
