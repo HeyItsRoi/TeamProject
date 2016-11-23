@@ -1,0 +1,24 @@
+<?php
+
+if (isset($_POST['submit'])){
+	$servername = "localhost";
+	$username = "username";
+	$password = "password";
+
+	// Create connection
+	$conn = mysql_connect($servername, $username, $password);
+	// Check connection
+	if (!$conn) {
+	    die("Connection failed: " . mysql_error());
+	} 
+	mysql_select_db(myDaycare, $conn);
+
+	//Add the auto increment here
+	$sql = "INSERT INTO MyParent (firstname  ,lastname  ,email  ,phone_number ,address ,child_Fname  ,child_Lname ) VALUES ('$_POST[firstname]', $_POST[lastname]' $_POST[email]' $_POST[phone_number]' $_POST[address]' $_POST[child_Fname]' $_POST[child_Lname]')";
+
+	mysql_query($sql, $conn);
+	mysql_close($conn);
+}
+
+?>
+

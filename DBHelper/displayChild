@@ -1,0 +1,26 @@
+<?php
+
+	$servername = "localhost";
+	$username = "username";
+	$password = "password";
+
+	// Create connection
+	$conn = mysql_connect($servername, $username, $password);
+	// Check connection
+	if (!$conn) {
+	    die("Connection failed: " . mysql_error());
+	} 
+	mysql_select_db(myDaycare, $conn);
+	$sql = "SELECT * FROM MyChild";
+	$myData = mysql_query($sql, $conn);
+
+	//Try to display it in TextBoxes, this is just a test
+	while($record = my sql_fetch_array($myData)){
+	echo $record['cfirstname']."".$record['clastname']."".$record['allergies']."".$record['phone_number']."".$record['address']."".$record['parent_Fname']."".$record['parent_Lname']."".$record['child_dob'];
+	echo "<br />"
+	}
+
+	
+	mysql_close($conn);
+
+?>
