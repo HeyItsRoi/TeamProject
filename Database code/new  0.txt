@@ -18,7 +18,7 @@ if ($conn->query($sql) === TRUE) {
     echo "Error creating database: " . $conn->error;
 }
 
-$sql = "CREATE TABLE MyParents (
+$parentsTable = "CREATE TABLE MyParents (
 id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
 firstname VARCHAR2(30) NOT NULL,
 lastname VARCHAR2(30) NOT NULL,
@@ -29,7 +29,7 @@ child_Fname VARCHAR2(50) NOT NULL,
 child_Lname VARCHAR2(50) NOT NULL,
 )";
 
-$sql = "CREATE TABLE MyChild (
+$childTable = "CREATE TABLE MyChild (
 id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
 cfirstname VARCHAR2(30) NOT NULL,
 clastname VARCHAR2(30) NOT NULL,
@@ -41,18 +41,18 @@ parent_Lname VARCHAR2(50) NOT NULL,
 child_dob DATE NOT NULL
 )";
 
-if ($conn->query($sql) === TRUE) {
+if ($conn->query($parentsTable) === TRUE) {
     echo "Table MyParents created successfully";
 } else {
     echo "Error creating table: " . $conn->error;
 }
-if ($conn->query($sql) === TRUE) {
+if ($conn->query($childTable) === TRUE) {
     echo "Table MyMyChild created successfully";
 } else {
     echo "Error creating table: " . $conn->error;
 }
 
-$sql = "INSERT INTO MyParents (firstname, lastname, email, phone_number, address, child_Fname, child_Lname)
+$insertParent = "INSERT INTO MyParents (firstname, lastname, email, phone_number, address, child_Fname, child_Lname)
 ADD A METHOD!!!
 
 $conn->close();
