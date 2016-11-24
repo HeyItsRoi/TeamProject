@@ -1,0 +1,42 @@
+body {
+	background-image: url(vivre.jpg);
+	font-family: "Verdana", Geneva, sans-serif;
+}
+
+.navbar-fixed-top {
+	padding-top: 10px;
+	background-color: black;
+	opacity: 0.9;
+}
+
+
+#navigation {
+	margin-left: 250px;
+	text-align: center;
+}
+
+#navigation a{
+	font-size: 17px;
+	margin-right: 50px;
+	color: white;
+}
+
+#navigation a:hover{
+	text-decoration:none;
+	color: #808080;
+}
+
+#search {
+	float: right;
+	margin-right: 20px;
+	margin-bottom: 5px;
+}
+
+table {   
+	border: 3px solid black;
+	background-color: #f2f2f2;
+}
+
+table th {
+	background-color: #c0c0c0;
+}
