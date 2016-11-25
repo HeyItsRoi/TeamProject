@@ -25,7 +25,7 @@ body {
  padding:10px;
  padding-left: 40px;
  padding-top: 15px;
- height: 55%;
+ height: 49%;
 }
 
 .form-group {
@@ -45,7 +45,7 @@ body {
 
 #savebutton {
  float:right;
- margin-top:15%;
+ margin-top:11%;
 }
 
 #specifics {
@@ -55,9 +55,8 @@ body {
  border: 2px solid black;
  border-radius: 15px 15px 15px 15px; 
  background-color:hsla(90, 10%, 80%, 0.9);
- padding-left: 30px;
  padding-top: 15px;
- padding-right: 10px;
+ padding-right: 1px;
  padding-bottom: 10px;
  width: 30%;
  font-weight: bold;
