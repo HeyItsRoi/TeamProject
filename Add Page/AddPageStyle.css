@@ -1,0 +1,62 @@
+body {
+	background-image:url(vivre.jpg);
+	font-family: "Verdana", Geneva, sans-serif;
+}
+
+#button {
+ margin-left:45px;
+ margin-bottom:50px;
+ margin-top: 10px;
+}
+
+#remove {
+ margin-left: 10px;
+}
+
+#picture {
+	margin-bottom:10px;
+	margin-top: 20px;
+}
+
+.form-horizontal {
+ border: 3px solid black;
+ border-radius: 15px 15px 15px 15px;
+ background-color:hsla(90, 10%, 80%, 0.9);
+ padding:10px;
+ padding-left: 40px;
+ padding-top: 15px;
+ height: 52%;
+}
+
+.form-group {
+ margin-bottom:15px;
+ width:80%;
+}
+
+#right {
+ float:right;
+ width:50%;
+ margin-top: -447px;
+}
+
+#left{
+ width:50%;
+}
+
+#savebutton {
+ margin-left: 42%;
+}
+
+#specifics {
+ margin-left: 300px;
+ margin-top: -340px;
+ margin-bottom: 220px;
+ border: 2px solid black;
+ border-radius: 15px 15px 15px 15px; 
+ background-color:hsla(90, 10%, 80%, 0.9);
+ padding-top: 15px;
+ padding-right: 1px;
+ padding-bottom: 10px;
+ width: 30%;
+ font-weight: bold;
+}
