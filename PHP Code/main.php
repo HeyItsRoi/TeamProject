@@ -48,7 +48,8 @@
 	}
 	
 	mysql_select_db("myDaycare", $conn);
-
+	
+	//Delete child
 	if (isset($_POST['remove']))
 		{
 			$remove = "DELETE from myChild where cfirstname = '$_POST[cfirstname]' and clastname = '$_POST[clastname]'";
@@ -60,6 +61,7 @@
 	
 	$myData=mysql_query($sql, $conn);
 	
+	//Display all records
 	echo "<table>
 	<tr>
 	<th>First Name</th>
