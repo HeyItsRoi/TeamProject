@@ -121,9 +121,9 @@
 		mysql_select_db("myDaycare", $conn);
 		
 		$addChild = "INSERT INTO myChild(cid, cfirstname, clastname, parent_Fname, parent_Lname,  
-										 date_of_birth, allergies, phone_number, address,city, zip) 
-					 VALUES ('$_POST[cid]', '$_POST[cfirstname]', '$_POST[clastname]', '$_POST[parent_Fname]', '$_POST[parent_Lname]',
-					 '$_POST[date_of_birth]','$_POST[allergies]',  '$_POST[phone_number]', '$_POST[address]', '$_POST[city]', '$_POST[zip]')";
+						 date_of_birth, allergies, phone_number, address,city, zip) 
+			     VALUES ('$_POST[cid]', '$_POST[cfirstname]', '$_POST[clastname]', '$_POST[parent_Fname]', '$_POST[parent_Lname]',
+			    '$_POST[date_of_birth]','$_POST[allergies]',  '$_POST[phone_number]', '$_POST[address]', '$_POST[city]', '$_POST[zip]')";
 		
 			
 		mysql_query($addChild, $conn);
