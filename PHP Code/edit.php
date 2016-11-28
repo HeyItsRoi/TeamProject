@@ -91,8 +91,8 @@
 	if (isset($_POST['edit']))
 	{
 		$update = "UPDATE myChild set firstName = '$_POST[cfirstname]', lastName = '$_POST[clastname]', parent_Fname = '$_POST[parent_Fname]',
-									  parent_Lname = '$_POST[parent_Lname]', allergies = '$_POST[allergies]', phone_number = '$_POST[phone_number]',
-									  address = '$_POST[address]', city = '$_POST[city]',zip = '$_POST[zip]' where id = '$_POST[cid]'";
+					      parent_Lname = '$_POST[parent_Lname]', allergies = '$_POST[allergies]', phone_number = '$_POST[phone_number]',
+					      address = '$_POST[address]', city = '$_POST[city]',zip = '$_POST[zip]' where id = '$_POST[cid]'";
 		mysql_query($update, $conn);
 	};
 	
