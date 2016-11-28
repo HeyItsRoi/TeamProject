@@ -29,9 +29,9 @@
 			<a href="">Staff Directory</a>
 			<a href="">Calendar</a>
 			<a href="">Sign out</a>
-			<div id="search"> <!-- CHANGE THE SEARCH BUTTON-->
-				<input type="text" name="searchBox" id="searchBox" placeholder="Search">
-				<button type="submit" class="btn btn-info">Search</button>
+			<!---<div id="search"> <!-- CHANGE THE SEARCH BUTTON-->
+				<!---<input type="text" name="searchBox" id="searchBox" placeholder="Search">
+				<button type="submit" class="btn btn-info">Search</button>--->
 			</div>
 		</div>
 		
@@ -49,14 +49,7 @@
 	
 	mysql_select_db("myDaycare", $conn);
 	
-	//Delete child
-	if (isset($_POST['remove']))
-		{
-			$remove = "DELETE from myChild where cfirstname = '$_POST[cfirstname]' and clastname = '$_POST[clastname]'";
-			mysql_query($remove, $conn);
-		};
-
-    
+ 
 	$sql="SELECT * FROM myChild";
 	
 	$myData=mysql_query($sql, $conn);
@@ -73,12 +66,23 @@
 		
 		echo "<form action = main.php method=post>";
 		echo "<tr>";
-		echo "<td>" . "<input type=text name = cfirstname value=" . $record['cfirstname']. ">" . "</td>";
-		echo "<td>" . "<input type=text name = clastname value=" . $record['clastname']. ">" . "</td>";
-		echo "<td>" . "<a href=edit.php>Edit</a>" . "</td>";
+		echo "<td>" . "<input type=hidden name = cid value=" . $record['id']. ">" . "</td>";
+		echo "<td>" . "<input type=text name = cfirstname value=" . $record['firstName']. ">" . "</td>";
+		echo "<td>" . "<input type=text name = clastname value=" . $record['lastName']. ">" . "</td>";
+		echo "<td><a href='edit.php?id=$record[id]&firstName=$record[firstName]&lastName=$record[lastName]&parent_Fname=$record[parent_Fname]
+				&parent_Lname=$record[parent_Lname]&allergies=$record[allergies]&phone_number=$record[phone_number]&
+				address=$record[address]&city=$record[city]&zip=$record[zip]'>Edit</a></td>";
 		echo "<td>" . "<input type=submit name=remove value=remove" .  ">" . "</td>";
 		echo "</form>";	
 	}
+	
+	//Delete child
+	if (isset($_POST['remove']))
+		{
+			$remove = "DELETE from myChild where id = '$_POST[cid]'";
+			mysql_query($remove, $conn);
+		};
+
 	
 	echo "</table";
 	
