@@ -25,9 +25,9 @@
 	//Create myChild table
 	mysql_select_db("myDayCare", $conn);
 	$child = "CREATE TABLE myChild(
-	cid INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
-	cfirstname VARCHAR(30) NOT NULL,
-	clastname VARCHAR(30) NOT NULL,
+	id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+	firstName VARCHAR(30) NOT NULL,
+	lastName VARCHAR(30) NOT NULL,
 	parent_Fname VARCHAR(50) NOT NULL,
 	parent_Lname VARCHAR(50) NOT NULL,
 	date_of_birth DATE NOT NULL,
@@ -45,7 +45,3 @@
 </body>
 
 </html>
-
-
-
-
