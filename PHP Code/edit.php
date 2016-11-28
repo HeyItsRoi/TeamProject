@@ -75,8 +75,6 @@
 	</form>
 	
 	<?php
-	include('values.php');
-	
 	$conn = mysql_connect("localhost", "username", "password");
 	
 	//check connection 
