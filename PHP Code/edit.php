@@ -55,10 +55,7 @@
 	</div>
 	<form class="form-horizontal" method="POST" ction="edit.php">
 		<div id="left">
-		<div class="form-group">
- -			<label>Child ID</label>
- -			<input type="text" name = "cid" class="form-control" readonly="readonly"  value = "<?php echo $_GET['id']?>">
- -		  </div>
+		<input type="hidden" name = "cid" class="form-control" readonly="readonly"  value = "<?php echo $_GET['id']?>">
 			<div class="form-group">
 				<label>First Name</label>
 				<input type="text" name = "cfirstname" class="form-control" value = "<?php echo $_GET['firstName']?>">
