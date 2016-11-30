@@ -29,17 +29,25 @@
 			<a href="">Staff Directory</a>
 			<a href="">Calendar</a>
 			<a href="">Sign out</a>
-			<!---<div id="search"> <!-- CHANGE THE SEARCH BUTTON-->
-				<!---<input type="text" name="searchBox" id="searchBox" placeholder="Search">
-				<button type="submit" class="btn btn-info">Search</button>--->
+			<div id="search"> <!-- CHANGE THE SEARCH BUTTON-->
+				<input type="text" name="searchBox" id="searchBox" placeholder="Search">
+				<button type="submit" class="btn btn-info">Search</button>
 			</div>
 		</div>
 		
 	</nav>
 
-	<?php  
-	
-	$conn = mysql_connect("localhost", "username", "password");
+	<table class="table table-bordered">
+		<tr>
+			<th><b>First name</b></th>
+			<th><b>Last name</b></th>
+			<th><b>Edit / Remove</b></th> <!-- ADD AN ALERT BOX (ex: Do) WHEN YOU WANT TO REMOVE A CHILD -->
+		</tr>
+		
+		
+		
+		<?php  
+		$conn = mysql_connect("localhost", "username", "password");
 	
 	//check connection 
 	if (!$conn)
@@ -54,25 +62,18 @@
 	
 	$myData=mysql_query($sql, $conn);
 	
-	//Display all records
-	echo "<table>
-	<tr>
-	<th>First Name</th>
-	<th>Last Name</th>
-	<th>Edit/Remove</th>
-	</tr>";
-	
-	while($record=mysql_fetch_array($myData)){
+		
+		while($record=mysql_fetch_array($myData)){
 		
 		echo "<form action = main.php method=post>";
 		echo "<tr>";
-		echo "<td>" . "<input type=hidden name = cid value=" . $record['id']. ">" . "</td>";
+		echo  "<input type=hidden name = cid value=" . $record['id']. ">";
 		echo "<td>" . "<input type=text name = cfirstname value=" . $record['firstName']. ">" . "</td>";
 		echo "<td>" . "<input type=text name = clastname value=" . $record['lastName']. ">" . "</td>";
 		echo "<td><a href='edit.php?id=$record[id]&firstName=$record[firstName]&lastName=$record[lastName]&parent_Fname=$record[parent_Fname]
-				&parent_Lname=$record[parent_Lname]&allergies=$record[allergies]&phone_number=$record[phone_number]&
-				address=$record[address]&city=$record[city]&zip=$record[zip]'>Edit</a></td>";
-		echo "<td>" . "<input type=submit name=remove value=remove" .  ">" . "</td>";
+			&parent_Lname=$record[parent_Lname]&allergies=$record[allergies]&phone_number=$record[phone_number]&address=$record[address]&
+			city=$record[city]&zip=$record[zip]'>Edit</a>   <input type=submit name=remove value=Remove" .  "> </td>";
+										
 		echo "</form>";	
 	}
 	
@@ -82,15 +83,10 @@
 			$remove = "DELETE from myChild where id = '$_POST[cid]'";
 			mysql_query($remove, $conn);
 		};
-
-	
-	echo "</table";
-	
-	mysql_close($conn);
-	
+		
+			mysql_close($conn);
 	?>
-
-
+		
+	</table>
 </body>
-
 </html>
