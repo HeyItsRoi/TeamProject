@@ -53,45 +53,49 @@
 			</ul>
 		</div>
 	</div>
-	<form class="form-horizontal" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>
+	<form class="form-horizontal" method="POST" ction="edit.php">
 		<div id="left">
+		<div class="form-group">
+ -			<label>Child ID</label>
+ -			<input type="text" name = "cid" class="form-control" readonly="readonly"  value = "<?php echo $_GET['id']?>">
+ -		  </div>
 			<div class="form-group">
 				<label>First Name</label>
-				<input type="text" name = "cfirstname" class="form-control" >
+				<input type="text" name = "cfirstname" class="form-control" value = "<?php echo $_GET['firstName']?>">
 			  </div>
 			  <div class="form-group">
 				<label>Last name</label>
-				<input type="text" name = "clastname" class="form-control" >
+				<input type="text" name = "clastname" class="form-control"  value = "<?php echo $_GET['lastName']?>">
 			  </div>
 			  <div class="form-group">
 				<label>Parent's First Name</label>
-				<input type="text" name = "parent_Fname" class="form-control" >
+				<input type="text" name = "parent_Fname" class="form-control"  value = "<?php echo $_GET['parent_Fname']?>">
 			  </div>
 			  <div class="form-group">
 				<label>Parent's Last Name</label>
-				<input type="text" name = "parent_Lname" class="form-control" >
+				<input type="text" name = "parent_Lname" class="form-control"  value = "<?php echo $_GET['parent_Lname']?>">
 			  </div>
 		  </div>
 		  <div id="right">
 			  <div class="form-group">
 				<label>Allergies</label>
-				<textarea class="form-control" name = "allergies" rows="4" placeholder = "Write text" ></textarea>
+				<textarea class="form-control" name = "allergies" rows="4" placeholder = "Write text" value = "<?php echo $_GET['allergies']?>"></textarea>
 			  </div>
 			  <div class="form-group">
 				<label>Phone Number</label>
-				<input type="text" name = "phone_number" class="form-control" >
+				<input type="text" name = "phone_number" class="form-control" value = "<?php echo $_GET['phone_number']?>">
 			  </div>
 			  <div class="form-group">
 				<label>Address</label>
-				<input type="text" name = "address" class="form-control" >
+				<input type="text" name = "address" class="form-control" value = "<?php echo $_GET['address']?>">
 			  </div>
 			  <div class="form-group">
 				<label>City/Town</label>
-				<input type="text" name = "city" class="form-control" >
+				<input type="text" name = "city" class="form-control" value = "<?php echo $_GET['city']?>" >
 			  </div>
 			  <div class="form-group">
 				<label>Zip</label>
-				<input type="text" name = "zip" class="form-control" >
+				<input type="text" name = "zip" class="form-control" value = "<?php echo $_GET['zip']?>" >
 		  		</div>
 	  		</div>
 			<input type="submit" name = "edit" id="saveButton class="form-control" > 
@@ -113,15 +117,14 @@
 	if (isset($_POST['edit']))
 	{
 		$update = "UPDATE myChild set firstName = '$_POST[cfirstname]', lastName = '$_POST[clastname]', parent_Fname = '$_POST[parent_Fname]',
-					      parent_Lname = '$_POST[parent_Lname]', allergies = '$_POST[allergies]', phone_number = '$_POST[phone_number]',
-					      address = '$_POST[address]', city = '$_POST[city]',zip = '$_POST[zip]' where id = '$_POST[cid]'";
+									  parent_Lname = '$_POST[parent_Lname]', allergies = '$_POST[allergies]', phone_number = '$_POST[phone_number]',
+									  address = '$_POST[address]', city = '$_POST[city]',zip = '$_POST[zip]' where id = '$_POST[cid]'";
 		mysql_query($update, $conn);
 	};
 	
 	
 	mysql_close($conn);
-	
-	
+		
 	?>
 </body>
 </html>
