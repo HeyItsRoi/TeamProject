@@ -1,0 +1,22 @@
+body{
+	background:url(vivre.jpg);
+	background-size:cover;
+	float:left;
+}
+
+#login{
+
+     border-radius: 15px 50px 30px 5px;
+    background: #73AD21;
+	font:menu;
+	font-size: 16px;
+	background-color:	#F5F5F5;
+    border: 3px solid green;
+	margin-left:700px;
+	margin-top:200px;
+	width: 550px;
+	height: 300px;
+	text-align:center;
+	box-shadow: 10px 10px 5px #000000;
+
+}

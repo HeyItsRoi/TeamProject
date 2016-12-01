@@ -1,0 +1,96 @@
+body {
+	background-image:url(vivre.jpg);
+	font-family: "Verdana", Geneva, sans-serif;
+}
+
+.navbar-fixed-top {
+	padding-top: 10px;
+	background-color: rgba(0, 0, 0, 0.9);
+}
+
+#navigation {
+	margin-left: 250px;
+	text-align: center;
+}
+
+#navigation a{
+	font-size: 17px;
+	margin-right: 50px;
+	color: white;
+}
+
+#navigation a:hover{
+	text-decoration:none;
+	color: #808080;
+}
+
+#search {
+	float: right;
+	margin-right: 20px;
+	margin-bottom: 5px;
+}
+
+#button {
+ margin-left:38px;
+ margin-bottom:50px;
+ margin-top: 10px;
+}
+
+#remove {
+ margin-left: 10px;
+}
+
+#picture {
+	margin-bottom:10px;
+	margin-top: 20px;
+}
+
+#picInfo {
+	margin-top: 65px;
+}
+
+.form-horizontal {
+ border: 3px solid black;
+ border-radius: 15px 15px 15px 15px;
+ background-color:hsla(90, 10%, 80%, 0.9);
+ padding:10px;
+ padding-left: 40px;
+ padding-top: 15px;
+ height: 49%;
+ width: 90%;
+}
+
+.form-group {
+ margin-bottom:15px;
+ width:80%;
+}
+
+#right {
+ float:right;
+ width:50%;
+ margin-top: -300px;
+}
+
+#left{
+ width:50%;
+}
+
+#savebutton {
+ float:right;
+ margin-top:11%;
+ margin-right: 50%;
+}
+
+#specifics {
+ margin-left: 300px;
+ margin-top: -340px;
+ margin-bottom: 220px;
+ border: 2px solid black;
+ border-radius: 15px 15px 15px 15px; 
+ background-color:hsla(90, 10%, 80%, 0.9);
+ padding-top: 15px;
+ padding-right: 1px;
+ padding-bottom: 10px;
+ width: 30%;
+ font-weight: bold;
+}
