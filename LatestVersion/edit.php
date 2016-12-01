@@ -26,7 +26,7 @@
 		<nav class="navbar-fixed-top">
 			<div id="navigation">
 				<a href="main.php">Home</a>
-				<a href="">Add new child</a>
+				<a href="addChild.php">Add new child</a>
 				<a href="">Staff Directory</a>
 				<a href="">Calendar</a>
 				<a href="">Sign out</a>
