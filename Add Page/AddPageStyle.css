@@ -2,10 +2,41 @@ body {
 	background-image:url(vivre.jpg);
 	font-family: "Verdana", Geneva, sans-serif;
 }
+.navbar-fixed-top {
+	padding-top: 10px;
+	background-color: rgba(0, 0, 0, 0.9);
+}
+
+.navbar-fixed-top a {
+	margin-right: 20%; 
+	padding: 1%;
+	color: white;
+}
+
+#navigation {
+	margin-left: 250px;
+	text-align: center;
+}
+
+#navigation a{
+	font-size: 17px;
+	margin-right: 50px;
+	color: white;
+}
+
+#navigation a:hover{
+	text-decoration:none;
+	color: #808080;
+}
+
+#search {
+	float: right;
+	margin-right: 20px;
+	margin-bottom: 5px;
+}
 
 #button {
  margin-left:45px;
- margin-bottom:50px;
  margin-top: 10px;
 }
 
@@ -15,13 +46,13 @@ body {
 
 #picture {
 	margin-bottom:10px;
-	margin-top: 20px;
+	margin-top: 100px;
 }
 
 .form-horizontal {
  border: 3px solid black;
  border-radius: 15px 15px 15px 15px;
- background-color:hsla(90, 10%, 80%, 0.9);
+ background-color: hsla(90, 10%, 80%, 0.9);
  padding:10px;
  padding-left: 40px;
  padding-top: 15px;
@@ -49,8 +80,8 @@ body {
 
 #specifics {
  margin-left: 300px;
- margin-top: -340px;
- margin-bottom: 220px;
+ margin-top: -300px;
+ margin-bottom: 175px;
  border: 2px solid black;
  border-radius: 15px 15px 15px 15px; 
  background-color:hsla(90, 10%, 80%, 0.9);
