@@ -29,10 +29,16 @@
 			<a href="">Staff Directory</a>
 			<a href="">Calendar</a>
 			<a href="">Sign out</a>
-			<div id="search"> <!-- CHANGE THE SEARCH BUTTON-->
+			
+			<form action="search.php" method="post">
+			<div id="search">
 				<input type="text" name="searchBox" id="searchBox" placeholder="Search">
-				<button type="submit" class="btn btn-info">Search</button>
+				<!---<button type="submit" class="btn btn-info">Search</button>--->
+				<input type="submit" name = "search" id="search" class="btn btn-info" >
 			</div>
+			</form>
+			
+			
 		</div>
 		
 	</nav>
@@ -61,7 +67,6 @@
 	$sql="SELECT * FROM myChild";
 	
 	$myData=mysql_query($sql, $conn);
-	
 		
 		while($record=mysql_fetch_array($myData)){
 		
