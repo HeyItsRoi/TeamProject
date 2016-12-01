@@ -23,49 +23,61 @@
 <body class="container">
 	<header>
 		<nav class="navbar-fixed-top">
-		<div id="navigation">
-			<a href="Home Page.html">Home</a>
-			<a href="">Add new child</a>
-			<a href="">Staff Directory</a>
-			<a href="">Calendar</a>
-			<a href="">Sign out</a>
-			<div id="search"> <!-- CHANGE THE SEARCH BUTTON, ADD A BUTTON WITH A PICTURE-->
-				<input type="text" name="searchBox" id="searchBox" placeholder="Search">
-				<button type="submit" class="btn btn-info">Search</button>
-			</div>
-		</div>	
+			<div id="navigation">
+				<a href="Home Page.html">Home</a>
+				<a href="">Add new child</a>
+				<a href="">Staff Directory</a>
+				<a href="">Calendar</a>
+				<a href="">Sign out</a>
+				<div id="search"> <!-- CHANGE THE SEARCH BUTTON, ADD A BUTTON WITH A PICTURE-->
+					<input type="text" name="searchBox" id="searchBox" placeholder="Search">
+					<button type="submit" class="btn btn-info">Search</button>
+				</div>
+			</div>	
 		</nav>
 	</header>
 	
 	<div class="container">
 		<img src="profile.png" id="parentPic" class="img-thumbnail" style="width:250px;height:250px;">
+		<div id = "buttons">
+			<form method="link" action="ParentEditPage.html" >
+				<input type="submit" id="change" value="Edit" class="btn btn-info"><!-- Links to the parent's edit page -->
+			</form>
+			<button type="button" class="btn btn-info" id="remove">Remove</button>
+		</div>
 	</div>
 
 	<form class="form-horizontal">
 		<div id="left">
 			<div class="form-group" id="id_field">
 				<label>Id</label>
-				<input type="text" name = "pId" class="form-control" >
+				<input type="text" name = "pId" class="form-control">
 			</div>
 		  	<div class="form-group" id="address_field">
 				<label>Address</label>
-				<input type="text" name = "pId" class="form-control" >
+				<input type="text" name = "address" class="form-control" >
 			</div>
 			<div class="form-group" id="email_field">
 				<label>Email</label>
-				<input type="text" name = "pId" class="form-control" >
+				<input type="text" name = "email" class="form-control" >
 			</div>
 		 </div>
 		 <div id="right">
 			  <div class="form-group" id="phone_field">
 				<label>Phone number</label>
-				<input type="text" name = "pId" class="form-control" >
+				<input type="text" name = "phine_number" class="form-control" >
 			  </div>
 			  <div class="form-group" id="child_field">
-				<label>Child</label>
-				<input type="text" name = "pId" class="form-control" >
+				<label>Child's first name</label>
+				<input type="text" name = "cfirstname" class="form-control" >
 			  </div>
-			<a href="childPage.html" style="color: rgb(128, 128, 128);; text-decoration: none;">See child</a> <!-- Links to the child's page -->
+			  <div class="form-group" id="child_field">
+				<label>Child's last name</label>
+				<input type="text" name = "clastname" class="form-control" >
+			  </div>
+			<form method="link" action="ChildPage.html" >
+				<input type="submit" id="childButton" value="See child" class="btn btn-info"><!-- Links to the child's page -->
+			</form> 
 	  		</div>
 	</form>
 </body>
