@@ -19,6 +19,23 @@
 	<title>Adding a child</title>
 </head>
 <body class="container"> 
+	
+<header>
+		<nav class="navbar-fixed-top">
+			<div id="navigation">
+				<a href="main.php">Home</a>
+				<a href="addChild.php">Add new child</a>
+				<a href="">Staff Directory</a>
+				<a href="">Calendar</a>
+				<a href="">Sign out</a>
+				<div id="search"> <!-- CHANGE THE SEARCH BUTTON, ADD A BUTTON WITH A PICTURE-->
+					<input type="text" name="searchBox" id="searchBox" placeholder="Search">
+					<button type="submit" class="btn btn-info">Search</button>
+				</div>
+			</div>	
+		</nav>
+	</header>
+	<div id="picInfo">
 	<div id = "picture">
 		<img src="profile.png" alt="picture" class="img-thumbnail" style="width:250px;height:250px;">
 		<div id = "button">
@@ -32,6 +49,7 @@
 			<li> Profile image should have a minimum width of 210px and minimum height of 210px. </li>
 		    <li> Make sure to save changes after changing the image. </li> 
 		</ul>
+	</div>
 	</div>
 	
 	<form class="form-horizontal" style="height:47%;" method="POST" action="addChild.php">
