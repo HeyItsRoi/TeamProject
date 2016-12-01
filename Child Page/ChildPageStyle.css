@@ -104,5 +104,10 @@ body {
 	margin-left: -6%;
 }
 #submit{
-	margin-left: 560px;
+	margin-left: 550px;
 }
+
+textarea {
+	margin-left: 25px;
+}
+
