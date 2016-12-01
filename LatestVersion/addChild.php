@@ -79,7 +79,7 @@
 	  <div id="right" style="margin-top:-375px;">
 		  <div class="form-group">
 			<label>Allergies</label>
-			<textarea class="form-control" name = "allergies" rows="4" placeholder = "Write text" ></textarea>
+			<textarea class="form-control" name = "allergies" rows="4" ></textarea>
 		  </div>
 		  <div class="form-group">
 			<label>Phone Number</label>
@@ -93,13 +93,15 @@
 			<label>City/Town</label>
 			<input type="text" name = "city" class="form-control" >
 		  </div>
-		   <div class="form-group">
+		  <div class="form-group">
 			<label>Zip</label>
 			<input type="text" name = "zip" class="form-control" >
-		  </div>
+	</div>
 	  </div>
+	  
+</div>
 	  <!---<button type="submit" class="btn btn-info" id="saveButton">Save</button> -->
-	  <input type="submit" name = "submit" id="saveButton" class="btn btn-info" > 
+	  <input type="submit" name = "submit" id="saveButton" class="btn btn-info" onclick="window.open('ParentAddPage.php')"> 
 	</form>
 	 
 
@@ -116,7 +118,7 @@
 		
 		mysql_select_db("myDaycare", $conn);
 		
-		$addChild = "INSERT INTO myChild(firstName, lastName, parent_Fname, parent_Lname, date_of_birth, allergies, phone_number, address,city, zip) 
+		$addChild = "INSERT INTO myChild(firstName, lastName, parent_Fname, parent_Lname, date_of_birth, allergies, phone_number, address, city, zip) 
 					 VALUES ('$_POST[cfirstname]', '$_POST[clastname]', '$_POST[parent_Fname]', '$_POST[parent_Lname]',
 					 '$_POST[date_of_birth]','$_POST[allergies]',  '$_POST[phone_number]', '$_POST[address]', '$_POST[city]', '$_POST[zip]')";
 		
@@ -124,6 +126,7 @@
 		mysql_query($addChild, $conn);
 		
 		mysql_close($conn);
+		
 	}
 		
 	?>
