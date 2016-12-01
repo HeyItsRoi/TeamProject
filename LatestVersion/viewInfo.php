@@ -78,7 +78,7 @@
 		  <div id="right">
 			  <div class="form-group">
 				<label>Allergies</label>
-				<textarea class="form-control" name = "allergies" rows="4" placeholder = "Write text" value = "<?php echo $_GET['allergies']?>"></textarea>
+				<textarea class="form-control" name = "allergies" rows="4" placeholder = "<?php echo $_GET['allergies']?>"></textarea>
 			  </div>
 			  <div class="form-group">
 				<label>Phone Number</label>
