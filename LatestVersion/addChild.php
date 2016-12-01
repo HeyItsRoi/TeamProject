@@ -93,6 +93,10 @@
 			<label>City/Town</label>
 			<input type="text" name = "city" class="form-control" >
 		  </div>
+		   <div class="form-group">
+			<label>Zip</label>
+			<input type="text" name = "zip" class="form-control" >
+		  </div>
 	  </div>
 	  <!---<button type="submit" class="btn btn-info" id="saveButton">Save</button> -->
 	  <input type="submit" name = "submit" id="saveButton" class="btn btn-info" > 
