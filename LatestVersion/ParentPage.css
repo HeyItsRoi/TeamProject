@@ -2,14 +2,14 @@ body {
 	width: 100%;
 	height: 100%;
 	margin: 0%;
-	background-image: url("vivre.jpg");
+	background-image: url("vivre.jpg");	
+	font-family: "Verdana", Geneva, sans-serif;
 }
 
 .navbar-fixed-top {
 	padding-top: 10px;
 	background-color: rgba(0, 0, 0, 0.9);
 }
-
 
 .navbar-fixed-top a {
 	margin-right: 20%; 
@@ -40,6 +40,10 @@ body {
 }
 #one {
 	margin-left: 10%;
+}
+
+#printButton {
+	margin-left: 850px;
 }
 
 .infoContainer {

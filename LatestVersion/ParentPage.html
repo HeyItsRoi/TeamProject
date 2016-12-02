@@ -37,6 +37,12 @@
 		</nav>
 	</header>
 	<div class="infoContainer">
+	<button id="printButton" class="btn btn-info" onclick="toPrint()">Print</button>
+	<script type="text/javascript">
+		function toPrint() {
+			window.print();
+		}
+	</script>
 		<img src="profile.png" id="parentPic" class="img-thumbnail" style="width:250px;height:250px;">
 		<h2 id="title">PARENT'S NAME</h2>
 		<div id = "buttons">
@@ -46,7 +52,6 @@
 			<button type="button" class="btn btn-info" id="remove">Remove</button>
 		</div>
 	</div>
-
 	<form class="form-horizontal" method="POST" action="<?php echo htmlspecialchars($_SERVER[" PHP_SELF "]);?>
 		<div id="left">
 			<div class="form-group" id="id_field">
