@@ -25,8 +25,8 @@
 		<nav class="navbar-fixed-top">
 			<div id="navigation">
 				<a href="HomePage.html">Home</a>
-				<a href="AddPage.html">Add a child</a>
-				<a href="ParentAddPage.html">Add a parent</a>
+				<a href="addPage.php">Add a child</a>
+				<a href="ParentAddPage.php">Add a parent</a>
 				<a href="">Calendar</a>
 				<a href="">Sign out</a>
 				<div id="search"> <!-- CHANGE THE SEARCH BUTTON, ADD A BUTTON WITH A PICTURE-->
