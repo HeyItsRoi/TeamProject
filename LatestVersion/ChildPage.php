@@ -25,8 +25,8 @@
 		<nav class="navbar-fixed-top">
 			<div id="navigation">
 				<a href="HomePage.html">Home</a>
-				<a href="addPage.php">Add a child</a>
-				<a href="ParentAddPage.php">Add a parent</a>
+				<a href="AddPage.html">Add a child</a>
+				<a href="ParentAddPage.html">Add a parent</a>
 				<a href="">Calendar</a>
 				<a href="">Sign out</a>
 				<div id="search"> <!-- CHANGE THE SEARCH BUTTON, ADD A BUTTON WITH A PICTURE-->
@@ -39,6 +39,13 @@
 	
 	<div id="pageContent">
 		<div class="infoContainer">
+			<button id="printButton" class="btn btn-info" onclick="toPrint()">Print</button>
+			<script type="text/javascript">
+				function toPrint() {
+					window.print();
+				}
+			</script>
+			
 			<img src="profile.png" id="childPic" class="img-thumbnail" style="width:250px;height:250px;">
 			<p id="otherInfo">
 				<br>
@@ -72,7 +79,7 @@
 		
 		</form>
 
-		<form action="edit.php" method="post">
+		<form id="edit" method="link" action="edit.php" >
 			<input type="submit" value="Edit Info" class="btn btn-info">
 		</form>
 		<button type="button" class="btn btn-info" id="removeButton">Remove</button>	</div>
