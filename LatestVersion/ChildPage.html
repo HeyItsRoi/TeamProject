@@ -42,14 +42,13 @@
 			<img src="profile.png" id="childPic" class="img-thumbnail" style="width:250px;height:250px;">
 			<p id="otherInfo">
 				<br>
-				<h2> KID'S NAME</h2>
-				Age:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Sex:<br>
-				Date of Birth:<br>
-				Address:<br>
-				City:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Postal Code:<br>
-				Father's Name:<br>
-				Mother's Name:<br>
-				Guardian's Name:<br>
+				<h2> KID'S NAME</h2> <!-- <?php echo $_GET['firstName'] . $_GET['lastName']?> -->
+				Date of Birth:<br> <!-- <?php echo $_GET['cdob']?> -->
+				Address:<br> <!-- <?php echo $_GET['address']?> -->
+				City:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Postal Code:<br> <!-- <?php echo $_GET['city']?> -->
+				Zip: <br> <!-- <?php echo $_GET['zip'?> -->
+				Father's Name:<br> <!-- <?php echo $_GET['parent_Fname' . $_GET['parent_Lname']?> -->
+				Phone Number:<br> <!-- <?php echo $_GET['phone_number'?> -->
 				<a href="ParentPage.html" id="parentsLink">Parents/Guardian</a>
 			</p> 
 		</div>
@@ -68,6 +67,7 @@
 			SPECIFIC INFO ON THE KID(S) ex: Allergies, Pick-up time, Religious holidays<br>
 			SPECIFIC INFO ON THE KID(S) ex: Allergies, Pick-up time, Religious holidays<br>
 			SPECIFIC INFO ON THE KID(S) ex: Allergies, Pick-up time, Religious holidays<br>
+			<!-- <?php echo $_GET['allergies'?> -->
 		</p>
 
 		<form id="edit" method="link" action="editpage.html" >
