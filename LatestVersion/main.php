@@ -77,7 +77,7 @@
 		echo "<td>" . "<input type=text name = clastname value=" . $record['lastName']. ">" . "</td>";
 		echo "<td><a href='edit.php?id=$record[id]&firstName=$record[firstName]&lastName=$record[lastName]&parent_Fname=$record[parent_Fname]
 				&parent_Lname=$record[parent_Lname]&allergies=$record[allergies]&phone_number=$record[phone_number]&address=$record[address]
-				&city=$record[city]&zip=$record[zip]'>Edit</a>  <a href='viewInfo.php?id=$record[id]&firstName=$record[firstName]&lastName=
+				&city=$record[city]&zip=$record[zip]'>Edit</a>  <a href='childPage.php?id=$record[id]&firstName=$record[firstName]&lastName=
 				$record[lastName]&parent_Fname=$record[parent_Fname]&parent_Lname=$record[parent_Lname]&allergies=$record[allergies]
 				&phone_number=$record[phone_number]&address=$record[address]&city=$record[city]&zip=$record[zip]'>View</a>  <input type=submit 
 				name=remove value=Remove" .  "> </td>";
