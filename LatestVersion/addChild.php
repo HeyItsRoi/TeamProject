@@ -266,7 +266,7 @@ function test_input($data) {
 		  </div>
 		  <div class="form-group">
 			<label>Zip</label>
-			<input type="text" name = "zip" class="form-control" maxlength = "7" value="<?php echo $zip;?>">
+			<input type="text" name = "zip" class="form-control"placeholder = "e.g.: A1B 2A2" maxlength = "7" value="<?php echo $zip;?>">
 			<span class="error"> <?php echo $zipErr;?></span>
 	</div>
 	  </div>
