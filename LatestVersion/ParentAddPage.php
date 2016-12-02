@@ -1,3 +1,4 @@
+
 <!DOCTYPE>
 <html>
 <head>
@@ -25,7 +26,7 @@
 		<nav class="navbar-fixed-top">
 			<div id="navigation">
 				<a href="main.php">Home</a>
-				<a href="addChild.php">Add a child</a>
+				<a href="addChild.php">Add new child</a>
 				<a href="">Staff Directory</a>
 				<a href="">Calendar</a>
 				<a href="">Sign out</a>
@@ -52,7 +53,7 @@
 		</ul>
 	</div>
 	
-	<form class="form-horizontal">
+	<form class="form-horizontal" style="height:47%;" method="POST" action="ParentAddPage.php">
 	<div id="left">
 		<div class="form-group">
 			<label>First Name</label>
@@ -85,23 +86,22 @@
 			<input type="text" name = "address" class="form-control" >
 		  </div>
 	  </div>
-	  <button type="submit" class="btn btn-info" id="saveButton">Save</button>
+	  <!---<button type="submit" class="btn btn-info" id="saveButton">Save</button>--->
+	  <input type="submit" name = "submit" id="saveButton" class="btn btn-info">
 	</form>	
+	
 	<?php
 	if (isset($_POST['submit'])){
-			$servername = "localhost";
-			$username = "username";
-			$password = "password";
-		
-			// Create connection
-			$conn = mysql_connect($servername, $username, $password);
-			// Check connection
+			
+			$conn = mysql_connect("localhost", "username", "password");
+			
 			if (!$conn) {
 				die("Connection failed: " . mysql_error());
 			} 
-			mysql_select_db(MyChild, $conn);
+			mysql_select_db("myDaycare", $conn);
 		
-			$sql = "INSERT INTO MyParent (pfirstname ,plastname ,email ,cfirstname ,clastname ,phone_number ,address) VALUES ('$_POST[parent_Fname]', '$_POST[parent_Lname]', '$_POST[email]' ,'$_POST[cfirstname]', '$_POST[clastname]', '$_POST[phone_number]', '$_POST[address]')";
+			$sql = "INSERT INTO MyParents (firstname, lastname, email, phone_number, address, child_Fname, child_Lname) VALUES ('$_POST[parent_Fname]', 
+			'$_POST[parent_Lname]', '$_POST[email]', '$_POST[phone_number]', '$_POST[address]', '$_POST[cfirstname]', '$_POST[clastname]')";
 		
 			mysql_query($sql, $conn);
 			mysql_close($conn);
