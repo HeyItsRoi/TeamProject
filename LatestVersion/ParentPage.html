@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Parents</title>
+	
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Style sheet for the nav-bar-->
+	<link rel="stylesheet" type="text/css" href="startbootstrap-small-business-gh-pages\css\small-business.css"> 
+
+	<!-- Custom CSS for this page -->
+	<link rel="stylesheet" type="text/css" href="ParentPage.css">
+
+	<script src="startbootstrap-small-business-gh-pages\js\bootstrap.js"></script>
+	<script src="startbootstrap-small-business-gh-pages\js\jquery.js"></script>
+</head>
+<body class="container">
+	<header>
+		<nav class="navbar-fixed-top">
+			<div id="navigation">
+				<a href="HomePage.html">Home</a>
+				<a href="AddPage.html">Add a child</a>
+				<a href="ParentAddPage.html">Add a parent</a>
+				<a href="">Calendar</a>
+				<a href="">Sign out</a>
+				<div id="search"> <!-- CHANGE THE SEARCH BUTTON, ADD A BUTTON WITH A PICTURE-->
+					<input type="text" name="searchBox" id="searchBox" placeholder="Search">
+					<button type="submit" class="btn btn-info">Search</button>
+				</div>
+			</div>	
+		</nav>
+	</header>
+	<div class="infoContainer">
+		<img src="profile.png" id="parentPic" class="img-thumbnail" style="width:250px;height:250px;">
+		<h2 id="title">PARENT'S NAME</h2>
+		<div id = "buttons">
+			<form method="link" action="ParentEditPage.html">
+				<input type="submit" id="edit" value="Edit" class="btn btn-info"><!-- Links to the parent's edit page -->
+			</form>
+			<button type="button" class="btn btn-info" id="remove">Remove</button>
+		</div>
+	</div>
+
+	<form class="form-horizontal" method="POST" action="<?php echo htmlspecialchars($_SERVER[" PHP_SELF "]);?>
+		<div id="left">
+			<div class="form-group" id="id_field">
+				<label>Id</label>
+				<input type="text" name = "pId" class="form-control">
+			</div>
+		  	<div class="form-group" id="address_field">
+				<label>Address</label>
+				<input type="text" name = "address" class="form-control" >
+			</div>
+			<div class="form-group" id="email_field">
+				<label>Email</label>
+				<input type="text" name = "email" class="form-control" >
+			</div>
+		 </div>
+		 <div id="right">
+			  <div class="form-group" id="phone_field">
+				<label>Phone number</label>
+				<input type="text" name = "phine_number" class="form-control" >
+			  </div>
+			  <div class="form-group" id="child_field">
+				<label>Child's first name</label>
+				<input type="text" name = "cfirstname" class="form-control" >
+			  </div>
+			  <div class="form-group" id="child_field">
+				<label>Child's last name</label>
+				<input type="text" name = "clastname" class="form-control" >
+			  </div>
+			  <form method="link" action="ChildPage.html" >
+				<input type="submit" id="childButton" value="See child" class="btn btn-info"><!-- Links to the child's page -->
+			  </form> 
+	  		</div>
+	</form>
+
+	<!--	<?php
+	Since we're using this as add as well I put this 
+	if (isset($_POST['submit'])){
+		$servername = "localhost";
+		$username = "username";
+		$password = "password";
+	
+		// Create connection
+		$conn = mysql_connect($servername, $username, $password);
+		// Check connection
+		if (!$conn) {
+		    die("Connection failed: " . mysql_error());
+		} 
+		mysql_select_db(MyChild, $conn);
+	
+		$sql = "INSERT INTO MyChild (cfirstname ,clastname ,allergies ,phone_number ,address ,parent_Fname ,parent_Lname ,child_dob ) VALUES ('$_POST[cfirstname]', $_POST[clastname]' $_POST[allergies]' $_POST[phone_number]' $_POST[address]' $_POST[parent_Fname]' $_POST[parent_Lname]' $_POST[child_dob])";
+	
+		mysql_query($sql, $conn);
+		mysql_close($conn);
+	}
+
+	?> -->
+</body>
+</html>
